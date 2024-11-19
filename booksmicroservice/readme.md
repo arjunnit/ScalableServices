@@ -1,14 +1,8 @@
 # TO RUN THE APPLICATION LOCALLY
 
     ./gradlew bootRun
-        RUN JUST THE SQL SERVICE WITH DOCKER AND CHANGE SQL URL TO:
+        RUN JUST THE SQL SERVICE WITH DOCKER AND CHANGE SQL URL IN application.properties TO:
         spring.datasource.url=jdbc:mysql://localhost:3306/bookdb
-
-# TO BUILD JAR FILE USED BY DOCKERFILE AND THEN THE DOCKER COMPOSE
-
-    ./gradlew clean build
-        CHANGE SQL URL TO:
-        spring.datasource.url=jdbc:mysql://mysql:3306/bookdb
 
 # OpenAPI JSON available at: http://localhost:8080/v3/api-docs
 
@@ -16,12 +10,13 @@
 
 # TO START SQL SERVICE AND THE SPRINGBOOT SERVICE
 
+    CHANGE SQL URL IN application.properties TO:
+        spring.datasource.url=jdbc:mysql://mysql:3306/bookdb
     Go to bookmicroservice root folder
     open terminal
-    execute ./gradlew clean build
     execute "docker-compose up --build"
 
-# TO STOP SQL SERVICE
+# TO STOP DOCKER SERVICES
 
     open terminal
     execute "docker-compose down"
