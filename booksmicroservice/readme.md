@@ -18,6 +18,7 @@
 
     Go to bookmicroservice root folder
     open terminal
+    execute ./gradlew clean build
     execute "docker-compose up --build"
 
 # TO STOP SQL SERVICE
